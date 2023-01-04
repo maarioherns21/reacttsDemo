@@ -1,7 +1,7 @@
 export interface Movie {
   name: string;
   body: string;
-  creator: string;
+  creator?: string;
   image: string;
   _id?: any;
 }

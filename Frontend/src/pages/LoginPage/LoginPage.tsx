@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Login } from "../../components/Models/Model";
 
 interface Props {
@@ -22,7 +22,7 @@ const LoginPage:FC<Props> = ({setToken}) =>{
       const token = { ...formData };
       console.log(token);
       setIspending(true);
-      await fetch("", {
+      await fetch("http://localhost:4000/user/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(token),
@@ -60,6 +60,7 @@ const LoginPage:FC<Props> = ({setToken}) =>{
                 <button>{isPending ? "Submiting..": "Submit"}</button>
                 <button onClick={clear}>clear</button>
                </form>
+               <Link style={{ color: "whitesmoke",  fontSize:"12px" }} to="/signup">Sign up ?</Link>
             </div>
         )
 }

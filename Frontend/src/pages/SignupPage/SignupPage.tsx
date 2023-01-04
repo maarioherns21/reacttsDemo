@@ -23,7 +23,7 @@ const SignupPage: FC<Props> = ({ setToken }) => {
     e.preventDefault();
     const token = { ...formData };
     setIspending(true);
-    await fetch("", {
+    await fetch("http://localhost:4000/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(token),

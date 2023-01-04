@@ -10,8 +10,9 @@ interface Props {
 
 const MovieI: FC<Props> = ({ movie, handleDelete }) => {
   return (
-    <div>
+    <div >
       <h2>{movie.name}</h2>
+      <img src={movie.image} alt={movie.name} style={{ height: "720px"}} />
       <h3>{movie.creator}</h3>
       <h4>{movie.body}</h4>
       <Popup trigger={<button>Update</button>}>

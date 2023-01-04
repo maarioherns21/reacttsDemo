@@ -6,8 +6,10 @@ import useFetch from "../../components/useFetch/useFetch";
 
 
 const Profile: FC = () => {
+  const storage: any = localStorage.getItem("token");
+  const user = JSON.parse(storage);
   const { movies, error, isLoading } = useFetch();
-  const movie = movies.filter((movie) => movie.creator === "mario");
+  const movie = movies.filter((movie) => movie.creator === user?._id);
 
   return (
     <div>

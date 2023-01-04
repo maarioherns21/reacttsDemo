@@ -52,10 +52,10 @@ const EditForm:FC<Props> = ({movie}) =>{
             <form onSubmit={handleSubmit}>
               <input ref={inputRef} value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} />
               <textarea value={formData.body} onChange={(e) => setFormData({...formData, body: e.target.value})} />
-              <select value={formData.creator} onChange={(e) => setFormData({...formData, creator: e.target.value})}>
+              {/* <select value={formData.creator} onChange={(e) => setFormData({...formData, creator: e.target.value})}>
                 <option value="mario">mario</option>
                 <option value="mark">mark</option>
-              </select>
+              </select> */}
               <Filebase type="file" multiple={false} value={formData.image}  onDone={({base64}) => setFormData({...formData, image: base64})} />
               <button>{isPending ? "Submiting..." : "Submit"}</button>
               <button onClick={clear}>clear</button>
