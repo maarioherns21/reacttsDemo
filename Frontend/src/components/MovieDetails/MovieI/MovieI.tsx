@@ -9,16 +9,22 @@ interface Props {
 }
 
 const MovieI: FC<Props> = ({ movie, handleDelete }) => {
+const storage: any = localStorage.getItem("token")
+const user = JSON.parse(storage)
   return (
-    <div >
+    <div>
       <h2>{movie.name}</h2>
-      <img src={movie.image} alt={movie.name} style={{ height: "720px"}} />
+      <img src={movie.image} alt={movie.name} style={{ height: "720px" }} />
       <h3>{movie.creator}</h3>
       <h4>{movie.body}</h4>
-      <Popup trigger={<button>Update</button>}>
-        <EditForm movie={movie!} />
-      </Popup>
-      <button onClick={handleDelete}>Delete</button>
+      {user?._id === movie.creator && (
+        <>
+          <Popup trigger={<button>Update</button>}>
+            <EditForm movie={movie!} />
+          </Popup>
+          <button onClick={handleDelete}>Delete</button>
+        </>
+      )}
     </div>
   );
 };

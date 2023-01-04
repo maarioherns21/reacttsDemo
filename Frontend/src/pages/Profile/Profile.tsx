@@ -12,9 +12,12 @@ const Profile: FC = () => {
   const movie = movies.filter((movie) => movie.creator === user?._id);
 
   return (
-    <div>
+    <div >
       <div>{error ? error : null}</div>
       <div>{isLoading ? "Loading..." : ""}</div>
+      <img src={user?.image} alt={user?.name} style={{ maxHeight:"120px", borderRadius:"60px", paddingTop:"20px"}}/>
+      <h2>{user?.username}</h2>
+      <h3>{user?.bio}</h3>
       <MovieCard movies={movie} title="Mario Movies" />
     </div>
   );
