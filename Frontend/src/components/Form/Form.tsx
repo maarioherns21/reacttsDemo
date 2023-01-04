@@ -31,7 +31,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      navigate("/home");
+      navigate("/");
       setError(null);
       setIsPending(false);
     })

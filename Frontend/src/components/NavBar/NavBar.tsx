@@ -13,7 +13,7 @@ const user = JSON.parse(storage)
 
     return (
     <div className="nav">
-      <Link to="/home">Home</Link>
+      <Link to="/">Home</Link>
       <Link to="/form">Form</Link>
       {/* <Link to="/profile">profile</Link> */}
       <button onClick={deleteToken} >logout</button>

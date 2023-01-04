@@ -21,7 +21,7 @@ function App() {
         <NavBar deleteToken={deleteToken} />
         <header className="App-header">
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/user/:profile" element={<Profile />} />
             <Route path="form" element={<Form />} />
             <Route path="/movie/:id" element={<MovieDetails />} />

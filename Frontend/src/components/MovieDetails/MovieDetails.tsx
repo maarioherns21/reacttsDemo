@@ -16,7 +16,7 @@ const MovieDetails: FC = () => {
     })
       .then(() => {
         console.log(`${movie?.name} was deleted from the db`);
-        navigate("/home");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);

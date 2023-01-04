@@ -28,7 +28,7 @@ const EditForm:FC<Props> = ({movie}) =>{
         .then((data) => {
           console.log(data);
           setError(null);
-          navigate("/home");
+          navigate("/");
         })
         .catch((err) => {
           setError(err.message);

@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react"
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Login } from "../../components/Models/Model";
 
 interface Props {
@@ -15,6 +15,7 @@ const LoginPage:FC<Props> = ({setToken}) =>{
     const [error, setError] = useState<any>([]);
     const inputRef = useRef<HTMLInputElement>(null);
     const params = useParams<Record<string, string | undefined>>();
+    const navigate = useNavigate()
     console.log(params);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -31,6 +32,7 @@ const LoginPage:FC<Props> = ({setToken}) =>{
         .then((data) => {
           console.log(data);
           setToken(data);
+          navigate("/")
           setIspending(false);
           setError(null);
         })
