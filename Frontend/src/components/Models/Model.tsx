@@ -1,8 +1,9 @@
 export interface Movie {
   name: string;
   body: string;
-  creator?: string;
-  image: string;
+  creator?: any;
+  image?: string;
+  fileImage?: string;
   _id?: any;
 }
 

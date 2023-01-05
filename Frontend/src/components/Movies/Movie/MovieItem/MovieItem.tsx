@@ -10,7 +10,7 @@ const MovieItem: FC<Props> = ({ movie }) => {
   return (
     <div>
       <Link to={`/movie/${movie._id}`}>
-        <img src={movie.image} alt={movie.name} style={{ maxHeight: "420px" , display: "flex" }} />
+        <img src={`/uploads/${movie.fileImage}`}  alt={movie.name} style={{ maxHeight: "420px" , display: "flex" }} />
         <h3>{movie.name}</h3>
       </Link>
     </div>

@@ -56,7 +56,7 @@ const EditForm:FC<Props> = ({movie}) =>{
                 <option value="mario">mario</option>
                 <option value="mark">mark</option>
               </select> */}
-              <Filebase type="file" multiple={false} value={formData.image}  onDone={({base64}) => setFormData({...formData, image: base64})} />
+              <Filebase type="file" multiple={false} value={formData.fileImage}  onDone={({base64}) => setFormData({...formData, fileImage: base64})} />
               <button>{isPending ? "Submiting..." : "Submit"}</button>
               <button onClick={clear}>clear</button>
             </form>

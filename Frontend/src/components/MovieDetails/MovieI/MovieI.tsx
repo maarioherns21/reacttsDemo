@@ -14,7 +14,7 @@ const user = JSON.parse(storage)
   return (
     <div>
       <h2>{movie.name}</h2>
-      <img src={movie.image} alt={movie.name} style={{ height: "720px" }} />
+      <img src={`/uploads/${movie.fileImage}`}  alt={movie.name} style={{ maxHeight: "420px" , display: "flex" }} />
       <h3>{movie.creator}</h3>
       <h4>{movie.body}</h4>
       {user?._id === movie.creator && (

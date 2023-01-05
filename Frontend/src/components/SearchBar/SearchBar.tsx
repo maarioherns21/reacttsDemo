@@ -47,7 +47,7 @@ return (
           .map((movie: Movie) => (
             <div key={movie._id}>
            <Link to={`/movie/${movie._id}`}>
-                <img src={movie.image} alt={movie.name} style={{ maxHeight:"420px", display: "flex"}} />
+             <img src={`/uploads/${movie.fileImage}`}  alt={movie.name} style={{ maxHeight: "420px" , display: "flex" }} />
                  <h2>{movie.name}</h2>
            </Link>
             </div>

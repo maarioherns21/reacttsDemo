@@ -1,11 +1,11 @@
 import express from "express"
-import { createMovie, deleteMovie, index, updateMovie } from "../controllers/movies.js"
+import { createMovie, deleteMovie, index, updateMovie, upload } from "../controllers/movies.js"
 const router = express.Router()
 
 
 router.get("/", index)
 
-router.post("/new", createMovie)
+router.post("/new", upload.single("photo"), createMovie)
 
 router.patch("/:id", updateMovie)
 

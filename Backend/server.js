@@ -18,6 +18,8 @@ app.use(cors())
 
 app.use("/movie", RouteIndex)
 app.use("/user", RouteUser )
+app.use("/uploads",express.static("./uploads"));
+
 
 const PORT = process.env.PORT
 
