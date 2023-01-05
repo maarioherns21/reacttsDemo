@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started Demo App react-typescript
 
 This Project was build with react --template typescipt Mern app with multer as the file uploader 
 
