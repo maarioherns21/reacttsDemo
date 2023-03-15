@@ -29,6 +29,7 @@ const MovieDetails: FC = () => {
       <div>{error ? error : null}</div>
       <div>{isLoading ? "Loading..." : ""}</div>
       {movie && <MovieI movie={movie} handleDelete={handleDelete} />}
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
