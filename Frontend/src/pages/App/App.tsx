@@ -38,7 +38,6 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage setToken={setToken} />} />
             <Route path="/signup" element={<SignupPage setToken={setToken} />}/>
-            <Route path="/*" element={<Navigate to="/login" />} />
           </Routes>
         </header>
       </BrowserRouter>
